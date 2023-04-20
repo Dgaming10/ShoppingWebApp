@@ -1,0 +1,102 @@
+
+body {
+    background: linear-gradient(-45deg, #cf52ee, #7f8afb, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: moving_background 15s ease infinite;
+    display: flex;
+    place-items: end; 
+    
+  }
+  @keyframes moving_background {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+  
+  .connect-div {
+    position: relative;
+    margin: 125px auto;
+    width: 500px;
+    height: 380px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.33);
+  }
+  
+  .links {
+    position: relative;
+    color: #00415d;
+    margin: 5px 5px 10px 5px;
+    padding-bottom: 10px;   
+    border-bottom: 2px solid #eee;
+    text-align: center;
+    height: 28px;
+  }
+  
+  .links a {
+    margin: 0 25px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  
+  .login{
+    position: relative;
+    text-align: center;
+    margin-top: 10%;
+  }
+  
+  .inside-form {
+    align-items: center;
+  }
+  
+  .data-inputs {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .data-inputs input[type="text"],
+  .data-inputs input[type="email"],
+  .data-inputs input[type="password"] {
+    width: calc(50% - 22px);
+    height: 45px;
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    border-radius: 2px;
+    color: #333;
+    font-size: 1rem;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+  }
+  
+  .data-inputs input:focus {
+    border-color: #358efb;
+  }
+  
+  .data-inputs button {
+    width: 50%;
+    background-color: #1cb94e;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 14px 0;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+  
