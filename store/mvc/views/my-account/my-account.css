@@ -1,0 +1,20 @@
+.remove-recipt {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  height: 25px;
+  width: 25px;
+}
+.section-orders{
+  display: flex;
+  gap: 5px;
+}
+body
+{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,102,1) 0%, rgba(37,95,123,1) 0%, rgba(74,87,161,1) 42%, rgba(0,212,255,1) 100%);
+  min-width: 580px;
+}
+.card{
+  border: none;
+}

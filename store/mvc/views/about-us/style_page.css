@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+
+.slash-pattern {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.25) 1px,
+    transparent 1px,
+    transparent 6px
+  );
+  background-size: 8px 8px;
+}
+body {
+  overflow-x: hidden;
+}
+#description {
+  -webkit-box-shadow: 0px -13px 40px 5px #6b6b6b;
+  box-shadow: 0px -13px 40px 5px rgba(107, 107, 107, 0.3);
+  position: relative;
+  overflow: hidden;
+
+  background-color: #90bbcb;
+  width: 101%;
+  height: 1900px;
+  font-family: "Merriweather Sans";
+  text-align: center;
+  color: rgb(63, 63, 63);
+  transition: all 0.5s ease;
+}
+#description p {
+  padding-top: 50px;
+  word-spacing: 10px;
+  font-size: 50px;
+  padding-bottom: 50px;
+
+  transition: all 0.5s ease;
+}
+#description h1 {
+  font-family: "Pacifico";
+
+  font-weight: 100;
+  letter-spacing: 4.9px;
+  padding-top: 50px;
+  font-size: 100px;
+  text-shadow: 3px 6px 6px rgba(19, 95, 128, 0.55);
+  color: rgb(63, 63, 63);
+  text-decoration-line: underline;
+  text-underline-offset: 50px;
+  padding-bottom: 80px;
+  transition: all 0.5s ease;
+}
+#description img {
+  -webkit-box-shadow: 0px 18px 27px 11px rgba(13, 92, 107, 0.84);
+  box-shadow: 0px 18px 27px 11px rgba(13, 92, 107, 0.84);
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  border: #6b6b6b;
+  border: 5px solid;
+}
+#con {
+  display: flex;
+}
+#map {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  height: 600px;
+  width: 80%;
+  margin-left: 10%;
+
+  border: 10px solid;
+  border: 11px double rgba(19, 158, 179, 0.58);
+  border-radius: 15px 15px 15px 15px;
+  position: relative;
+  transition: all 0.5s ease;
+}
+#side-info {
+  text-align: center;
+  align-items: center;
+  margin-right: 300px;
+}
+.side-object {
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.side-object img {
+  margin-left: 30px;
+  width: 100px;
+  height: 100px;
+}
+.side-object p {
+  width: 200px;
+}
+
+@media screen and (max-width: 1200px) {
+
+  #description {
+    font-size: 50px;
+    height: 1600px;
+  }
+
+  #description h1 {
+    font-size: 50px;
+  }
+  #description p {
+    font-size: 25px;
+  }
+  #description img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 200px;
+  }
+  
+  video{
+    margin-top: 500px;
+    width:500px;
+    height: 400px;
+    
+    }
+
+
+}
+video{
+margin-top: 500px;
+width:800px;
+height: 600px;
+
+}

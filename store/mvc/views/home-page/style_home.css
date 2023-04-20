@@ -1,0 +1,445 @@
+@font-face {
+  font-family: "farmgarden";
+  src: url(fonts/Farmgarden\ Regular.otf);
+}
+@font-face {
+  font-family: "huggies";
+  src: url(fonts/Huggies.otf);
+  font-weight: 1000;
+}
+@font-face {
+  font-family: "merriw";
+  src: url(fonts/MerriweatherSans-VariableFont_wght.ttf);
+  font-weight: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#poster {
+  background-image: url(images/woman_thumbs_up.png);
+  background-size: 30%;
+
+  background-repeat: no-repeat;
+  background-color: #afdff0;
+  font-family: merriw;
+
+  font-size: 60px;
+  background-position: top 100% right 0;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: rgb(54, 54, 54);
+  height: 110vh;
+  width: 100.5%;
+}
+#poster h4 {
+  color: #53a2bc;
+  text-shadow: 0px 5px 5px #3ab9e3;
+  margin-top: -300px;
+  margin-bottom: 100px;
+  font-size: 100px;
+  padding-left: 0;
+  font-family: huggies;
+  align-self: center;
+}
+#poster h3 {
+  font-size: 70px;
+  color: rgb(63, 63, 63);
+}
+#poster h2 {
+  margin-top: 30px;
+  font-size: 130px;
+}
+
+#poster p {
+  font-size: 28px;
+  letter-spacing: -1px;
+  color: rgb(166, 171, 171);
+}
+
+@media screen and (min-width: 1600px) {
+  #poster h4 {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+@media screen and (max-width: 1600px) {
+  #poster {
+    background-image: none;
+  }
+
+  #poster h4 {
+    text-size-adjust: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #poster h3 {
+    font-size: 70px;
+    transition: font-size 0.3s ease-in-out;
+  }
+  #poster h2 {
+    font-size: 130px;
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  #poster p {
+    font-size: 28px;
+    transition: font-size 0.3s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #poster h3 {
+    font-size: 52.5px;
+    transition: font-size 0.3s ease-in-out;
+    color: rgb(63, 63, 63);
+  }
+  #poster h2 {
+    margin-top: 30px;
+    transition: font-size 0.3s ease-in-out;
+    font-size: 97.5px;
+  }
+
+  #poster p {
+    font-size: 21px;
+    letter-spacing: -1px;
+    transition: font-size 0.3s ease-in-out;
+    color: rgb(166, 171, 171);
+  }
+}
+
+@keyframes my-animation-1 {
+  from {
+    opacity: 0;
+    left: -500px;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+@keyframes my-animation-2 {
+  from {
+    opacity: 0;
+    left: -500px;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+@keyframes my-animation-3 {
+  from {
+    opacity: 0;
+    top: -1000px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes my-animation-4 {
+  from {
+    opacity: 0;
+    bottom: -300px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+.run-animation-1 {
+  position: relative;
+  animation: my-animation-1 2s ease;
+}
+.run-animation-2 {
+  position: relative;
+
+  animation: my-animation-2 2s ease;
+}
+.run-animation-3 {
+  position: relative;
+
+  animation: my-animation-3 3s ease;
+}
+.run-animation-4 {
+  position: relative;
+
+  animation: my-animation-4 2s ease;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #3d85c6;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 4px 0px #29648a;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #29648a;
+  box-shadow: 0px 4px 0px #1f4d6f;
+}
+
+/* the next section */
+
+#shirt_presentation {
+  height: 110vh;
+
+  margin-left: 25%;
+  margin-right: auto;
+  align-items: flex-start;
+  display: flex;
+}
+#shirt_presentation img {
+  width: 900px;
+  height: 900px;
+}
+#shirt-1 {
+  position: absolute;
+  margin-top: 200px;
+}
+#shirt-2 {
+  position: absolute;
+  margin-top: 200px;
+}
+#shirt-3 {
+  position: absolute;
+  margin-top: 200px;
+}
+#shirt-text {
+  margin-top: 1%;
+  font-family: "merriw";
+  margin-left: 30%;
+  font-size: 80px;
+  color: rgb(63, 63, 63);
+  text-shadow: 0px 3px 5px #3f3f3f;
+}
+
+.hidden-hide {
+  opacity: 0;
+  transition: all 1s;
+}
+.show-1 {
+  opacity: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-name: shirt-animation-1;
+}
+.show-2 {
+  opacity: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-name: shirt-animation-2;
+}
+.show-3 {
+  opacity: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-name: shirt-animation-3;
+}
+.show-shirt-text {
+  opacity: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 0.7s;
+  animation-name: shirt-animation-text;
+}
+
+@keyframes shirt-animation-1 {
+  from {
+    opacity: 0;
+
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    margin-left: 2%;
+    transform: translateY(10px) rotate(10deg);
+    filter: blur(0px);
+  }
+}
+@keyframes shirt-animation-2 {
+  from {
+    opacity: 0;
+
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    margin-left: 7%;
+    transform: translateY(10px) rotate(20deg);
+    filter: blur(0px);
+  }
+}
+@keyframes shirt-animation-3 {
+  from {
+    opacity: 0;
+
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    margin-left: 12%;
+    transform: translateY(10px) rotate(30deg);
+    filter: blur(0px);
+  }
+}
+@keyframes shirt-animation-text {
+  from {
+    opacity: 0;
+    margin-left: 0;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    margin-left: 30%;
+
+    filter: blur(0px);
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  #shirt_presentation {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    animation-delay: 0.6s;
+    display: none;
+  }
+  #shirt-text {
+    display: none;
+  }
+}
+@media screen and (min-width: 1600px) {
+  #shirt_presentation {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+
+/* the next section */
+
+#items_grid {
+  display: grid;
+  align-items: center;
+  margin-left: 8%;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+#items_grid button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+#items_grid .card {
+  padding-top: 20px;
+  border-color: #68c5d1;
+  margin: 20px;
+  border-width: 4px;
+  width: 200px;
+  transition: 0.3s ease;
+}
+#items_grid .card h5 {
+  font-family: "farmgarden";
+  font-size: 35px;
+  font-weight: 700;
+}
+
+#items_grid .card:hover {
+  border-color: #53a2bc;
+  background-color: #afdff0;
+}
+
+#items_grid img {
+  align-self: center;
+  width: 130px;
+}
+
+@media screen and (max-width: 1000px) {
+  #items_grid .card {
+    padding-top: 20px;
+    border-color: #68c5d1;
+    margin: 10px;
+    border-width: 4px;
+    width: 150px;
+    transition: 0.3s ease;
+  }
+  #items_grid .card h5 {
+    font-family: "farmgarden";
+    font-size: 20px;
+    font-weight: 700;
+    transition: font-size 0.3s ease-in-out;
+  }
+  #items_grid img {
+    align-self: center;
+    width: 50px;
+    transition: width 0.3s ease-in-out;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #items_grid .card {
+    padding-top: 20px;
+    border-color: #68c5d1;
+    margin: 10px;
+    border-width: 4px;
+    width: 200px;
+    transition: 0.3s ease;
+  }
+  #items_grid .card h5 {
+    font-family: "farmgarden";
+    font-size: 35px;
+    font-weight: 700;
+    transition: font-size 0.3s ease-in-out;
+  }
+
+  #items_grid img {
+    align-self: center;
+    width: 130px;
+    transition: width 0.3s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #items_grid {
+    margin-left: 30%;
+  }
+  #items_grid .card {
+    padding-top: 20px;
+    border-color: #68c5d1;
+    margin: 10px;
+    border-width: 4px;
+    width: 200px;
+    transition: 0.3s ease;
+  }
+  #items_grid .card h5 {
+    font-family: "farmgarden";
+    font-size: 35px;
+    font-weight: 700;
+  }
+  #items_grid img {
+    align-self: center;
+    width: 130px;
+  }
+}

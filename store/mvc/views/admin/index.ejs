@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" href="/CSS/diagram1.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <title>Admin Page</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/tab-icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/tab-icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/tab-icon/favicon-16x16.png">
+  <link rel="manifest" href="/images/tab-icon/site.webmanifest">
+</head>
+
+<body>
+
+  
+  <div class="container">
+    <div class="row">
+      <div width="600" height="300" class="button-users">
+        <h1 class="diagram1">How many users are online</h1>
+        <h1 class="numUsers">0</h1>
+        <button class="usersOnline">Post to instagram the number of users online</button>
+      </div>
+      
+      <div class="col1" class ="slash-pattern">
+        <h1 class="diagram1">Number of items in each category</h1>
+        <svg id="svg1" width="600" height="300" ></svg>
+      </div>
+      <div class="col2" class ="slash-pattern">
+        <h1 class="diagram1">Sales per month</h1>
+        <svg id="svg2" width="800" height="400"></svg>
+      </div>
+    </div>
+  </div>
+
+  <script>
+      
+    const socket = io();
+    async function runScripts(){
+      await $.getScript('/JavaScript/diagram2.js',function(){
+        init(socket);
+      });
+      await $.getScript('/JavaScript/diagram1.js',function(){
+        init1(socket);
+      });
+    }
+    socket.on('userCounter',(counter) => {
+      $(".numUsers").text(counter);
+    })
+    
+    $(".usersOnline").click(function(){
+      
+        socket.emit('getUsersOnline');
+    });
+    
+    socket.on('usersOnline', (usersOnline) => {
+      //console.log('users2: ' + usersOnline);
+      $.ajax({
+        url: "/twitter/",
+        type: "POST",
+        async: false,
+        data: {numOnline : usersOnline},
+        success: function(res){
+          console.log('successfully uploaded tweet');
+        },
+        error: function(status){
+            console.log('erro: ' + status.status);
+        }
+      });
+    });
+    runScripts();
+  </script>
+    <div id="chart"></div>
+</body>
+
+</html>

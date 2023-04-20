@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/CSS/style_navbar.css" />
+  </head>
+  <body>
+    <nav id="header">
+      <input id="nav-toggle" type="checkbox" />
+      <div class="logo">
+        <a href="http://localhost:3000/home-page/">
+          <img
+          src="../home-page/images/logo_shlusy.png"
+          alt="logo"
+          style="height: 100px"
+        />
+        </a>
+        
+      </div>
+      <ul class="links">
+        <li>
+          <a class="home" href="http://localhost:3000/home-page/">Home</a>
+        </li>
+        <!-- where to go while pressing products-->
+        <li>
+          <a class="products" href="http://localhost:3000/products/"
+            >Products</a
+          >
+        </li>
+        <!-- where to go while pressing about-->
+        <li><a class="about" href="/about-us">About</a></li>
+        <li>
+          <a
+            class="admin"
+            style="display: none"
+            href="http://localhost:3000/admin/"
+            >Admin</a
+          >
+        </li>
+
+        <% if (!locals.loggedIn) { %>
+        <li><a class="login" href="http://localhost:3000/login">Log In</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="/register">Register</a>
+        </li>
+        <% } else {%>
+        <li><a class="logout" href="#">Log Out</a></li>
+        <% } %> <% if (locals.isAdmin) { %>
+        <li class="nav-item adminBtn">
+          <a class="nav-link" href="/admin">Admin</a>
+        </li>
+        <% } %> <% if (locals.loggedIn) { %>
+        <li class="nav-item">
+          <a class="nav-link" href="/my-account">my account</a>
+          <!-- place href -->
+        </li>
+        <% } %>
+      </ul>
+      <label for="nav-toggle" class="icon-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
+    </nav>
+    <script src="/JavaScript/navbar.js"></script>
+  </body>
+</html>
