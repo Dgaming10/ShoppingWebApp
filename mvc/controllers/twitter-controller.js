@@ -52,7 +52,7 @@ const postWhenAddingProduct = async (req, res) => {
 };
 
 const showSome = async (req, res) => {
-  const screenName = 'trvisXX';
+  const screenName = 'exampleAcc';
 
   //Retrieve the user object for the specified screen name
   client.get('users/show', { screen_name: screenName }, function(error, user, response) {
